@@ -9,8 +9,13 @@ body{
 .container-main{
     max-width: 1040px;
     margin: 0 auto;
+    // display: flex;
+    // height: 100vh;
+    // flex-direction: column;
+    // justify-content: space-between;
 }
 
+//ZAHLAVI
 .header{
     background-color: $bg-color-dark;
     min-height: 380px;
@@ -30,6 +35,8 @@ body{
     justify-content: flex-start;
 }
 
+
+//MENU
 .menu{
     background-color: $bg-color-dark;
     margin: 0;
@@ -44,3 +51,13 @@ li{
     font-size: $larger-size;
 }
 
+//ZAPATI
+.footer{
+background-color: $bg-color-dark;
+padding: 20px;
+}
+
+.footer_text{
+    font-size: $larger-size;
+    text-align: center;
+}

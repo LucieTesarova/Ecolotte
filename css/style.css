@@ -57,4 +57,14 @@ li {
   padding: 1em;
   font-size: 26px;
 }
+
+.footer {
+  background-color: #065f36;
+  padding: 20px;
+}
+
+.footer_text {
+  font-size: 26px;
+  text-align: center;
+}
 /*# sourceMappingURL=style.css.map */
