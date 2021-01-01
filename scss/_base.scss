@@ -35,7 +35,6 @@ body{
     justify-content: flex-start;
 }
 
-
 //MENU
 .menu{
     background-color: $bg-color-dark;
@@ -44,11 +43,16 @@ body{
     list-style: none;
     display: flex;
     justify-content: space-evenly;
-}
 
-li{
-    padding: 1em;
-    font-size: $larger-size;
+    li{
+        padding: 1em;
+        font-size: $larger-size;
+    
+        a{
+            color: $dark-color;
+            text-decoration: none;
+        }
+    }
 }
 
 //ZAPATI
