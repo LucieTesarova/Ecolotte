@@ -1,8 +1,13 @@
 ---
-layout: layouts/produkt
-title: Produkttt 005
-obrazek: triko.png
-cena: 190kc
+layout: layouts/seznam-produktu
+eleventyExcludeFromCollections: true
 ---
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit sed aliquam unde ad voluptatum dolor lorem dolore vitae consequatur unde sapiente. Omnis cumque tempore quae repellendus voluptate.
+{%- for product in collections.all -%}
+<a href="{{ product.url }}"><h2>{{product.data.title}}</h2></a>
+<img src="/images/{{ product.data.obrazek }}" width="200" alt="" />
+<p>Cena: {{product.data.cena}}</p>
+<div>{{ product.templateContent | striptags | truncate(150) | safe }}</div>
+
+<hr />
+{%- endfor -%}
