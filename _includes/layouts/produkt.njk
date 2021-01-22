@@ -3,12 +3,15 @@ layout: layouts/hlavni
 ---
 
 <section class="product">
-  <figure class="product_image">
-    <img src="/images/{{obrazek}}" alt="foto trika" />
-  </figure>
-  <div class="product_texts">
-    <h2>{{ title }}</h2>
-    <p>{{ content | safe }}</p>
-    <p>{{ cena }}</p>
+    <img src="/images/{{obrazek}}" width="500" alt="foto trika" />
+  <div class="product_description">
+    <div class="product_texts">
+    <h2 class="product_title">{{ title }}</h2>
+    <p class="product_text">{{ content | safe }}</p>
+    </div>
+  <div class="product_order">
+    <p class="product_price">{{ cena }}</p>
+    <button class="product_button">Objednat</button>
+  </div>
   </div>
 </section>
