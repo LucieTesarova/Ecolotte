@@ -3,54 +3,104 @@ layout: layouts/hlavni
 ---
 
 <section class="product">
-  <img src="/images/{{ obrazek }}" width="500" alt="foto trika" />
-  <div class="product_description">
-    <div class="product_texts">
-      <h2 class="product_title">{{ title }}</h2>
-      <p class="product_text">{{ content | safe }}</p>
+  <figure class="product__image-container">
+    <img
+      class="product__arrow-left"
+      src="/images/icons/arrow-left.svg"
+      width="30"
+      height="30"
+      alt="arrow-left"
+      onclick="arrowLeft()"
+    />
+    <img
+      class="product__image"
+      src="/images/{{ obrazek }}"
+      width="500"
+      alt="foto trika"
+    />
+    <img
+      class="product__arrow-right"
+      src="/images/icons/arrow-right.svg"
+      width="30"
+      height="30"
+      alt="arrow-right"
+      onclick="arrowRight()"
+    />
+  </figure>
+  <div class="product__description">
+    <div class="product__texts">
+      <h2 class="product__title">{{ title }}</h2>
+      <p class="product__text">{{ content | safe }}</p>
     </div>
-    <div class="product_order">
-      <p class="product_price">{{ cena }}</p>
-      <button class="product_button">Objednat</button>
+    <div class="product__order-info">
+      <p class="product__price">{{ cena }}</p>
+      <button class="product__button-order" onclick="showFormOrder()">
+        OBJEDNAT
+      </button>
     </div>
-    <!-- <form
-      action="mailto:info@w3docs.com?subject=Mail from our Website"
-      method="post"
-      enctype="text/plain"
-    >
-      <div>
-        <label for="name"
-          >Name:
-          <input type="text" name="name" id="name" />
-        </label>
-      </div>
-      <div>
-        <label for="email"
-          >Email:
-          <input type="text" name="email" id="email" />
-        </label>
-      </div>
-      <div>
-        <label>Comments:</label>
-        <br />
-        <textarea name="comments" rows="12" cols="35">
-Send your comments to us.</textarea
-        >
-      </div>
-      <div>
-        <input type="submit" name="submit" value="Send" />
-        <input type="reset" name="reset" value="Clear Form" />
-      </div>
-    </form> -->
-
-   
-        <textarea id="message" placeholder="Message"></textarea><br>
-    <button onclick="myFunction()">Try it</button>
-
-      <script>
-      function myFunction() {
-       window.location.href = (`mailto:recipient^example.com?subject=Ecolotte-Objednavka: ${document.querySelector('.product_title').textContent}&body=${document.getElementById('message').value}`).replace('^', '@');
-      }
-    </script>
   </div>
+
+  <div class="product__images">
+    <img src="/images/{{ obrazek }}" width="160" alt="foto trika" />
+    <img src="/images/{{ obrazek }}" width="160" alt="foto trika" />
+    <img src="/images/{{ obrazek }}" width="160" alt="foto trika" />
+  </div>
+
+  <form class="product__order">
+    <label for="name">Jméno:</label><br />
+    <input type="text" name="name" id="name" /><br />
+
+    <label for="surname">Příjmení:</label><br />
+    <input type="text" name="surname" id="surname" /><br />
+
+    <label for="number">Počet kusů:</label><br />
+    <input type="number" name="number" id="number" /><br />
+
+    <label>Poznámka:</label><br />
+    <textarea id="message" placeholder="Zadej poznámku.."></textarea><br />
+
+    <button onclick="openEmail()">Odeslat objednávku</button>
+  </form>
+
+  <script>
+    let image = document.querySelector('.product__image');
+    let sourceImageText = image.src;
+    let arraySourceImage = sourceImageText.split('.');
+    let nameImage = arraySourceImage[0];
+    let indexImage = arraySourceImage[1];
+    let formatImage = arraySourceImage[2];
+    let index = indexImage;
+    image.addEventListener("error", imgError);
+
+    function imgError(image) {
+      index = 0;
+      arrowRight();
+    }
+
+    function arrowRight() {
+      index++;
+      image.src = nameImage + '.' + index + '.' + formatImage;
+    }
+
+    function showFormOrder() {
+      let form = document.querySelector('.product__order');
+      form.style.display = 'block';
+    }
+
+    function openEmail() {
+      window.location.href = `mailto:recipient#%#example.com?subject=Ecolotte-Objednavka: ${
+        document.querySelector('.product__title').textContent
+      }
+           &body=Produkt: ${
+             document.querySelector('.product__title').textContent
+           },
+           %0D%0AJmeno: ${document.querySelector('#name').value},
+           %0D%0APrijmeni: ${document.querySelector('#surname').value},
+           %0D%0APocet kusu: ${document.querySelector('#number').value},
+           %0D%0APoznamka: ${document.getElementById('message').value}`.replace(
+        '#%#',
+        '@'
+      );
+    }
+  </script>
 </section>

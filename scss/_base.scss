@@ -26,12 +26,12 @@ body{
     align-items: center;
 }
 
-.header_title{
+.header__title{
     font-size: $largest-size;
     margin: 0;
 }
 
-.header_description{
+.header__description{
     font-size: $larger-size;
     display: flex;
     justify-content: flex-start;
@@ -63,7 +63,7 @@ background-color: $bg-color-dark;
 padding: 20px;
 }
 
-.footer_text{
+.footer__text{
     font-size: $larger-size;
     text-align: center;
 }
