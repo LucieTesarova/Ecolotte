@@ -1,7 +1,8 @@
 ---
 layout: layouts/produkt
 title: Produkttt 006
-obrazek: cepice.png
+obrazek: /cepice-ksiltovky/cepice1.jpg
+obrazek2: /cepice-ksiltovky/cepice2.jpg
 cena: 80kc
 ---
 

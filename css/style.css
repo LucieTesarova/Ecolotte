@@ -96,13 +96,6 @@ body {
           align-items: center;
 }
 
-.product_arrow-left
-.product_arrow-right {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .product__description {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;

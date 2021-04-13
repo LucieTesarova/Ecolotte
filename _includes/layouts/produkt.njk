@@ -5,27 +5,12 @@ layout: layouts/hlavni
 <section class="product">
   <figure class="product__image-container">
     <img
-      class="product__arrow-left"
-      src="/images/icons/arrow-left.svg"
-      width="30"
-      height="30"
-      alt="arrow-left"
-      onclick="arrowLeft()"
-    />
-    <img
       class="product__image"
       src="/images/{{ obrazek }}"
       width="500"
-      alt="foto trika"
+      alt="foto produktu"
     />
-    <img
-      class="product__arrow-right"
-      src="/images/icons/arrow-right.svg"
-      width="30"
-      height="30"
-      alt="arrow-right"
-      onclick="arrowRight()"
-    />
+
   </figure>
   <div class="product__description">
     <div class="product__texts">
@@ -41,9 +26,7 @@ layout: layouts/hlavni
   </div>
 
   <div class="product__images">
-    <img src="/images/{{ obrazek }}" width="160" alt="foto trika" />
-    <img src="/images/{{ obrazek }}" width="160" alt="foto trika" />
-    <img src="/images/{{ obrazek }}" width="160" alt="foto trika" />
+    <img src="/images/{{ obrazek2 }}" width="500" alt="foto trika" />
   </div>
 
   <form class="product__order">
@@ -63,24 +46,6 @@ layout: layouts/hlavni
   </form>
 
   <script>
-    let image = document.querySelector('.product__image');
-    let sourceImageText = image.src;
-    let arraySourceImage = sourceImageText.split('.');
-    let nameImage = arraySourceImage[0];
-    let indexImage = arraySourceImage[1];
-    let formatImage = arraySourceImage[2];
-    let index = indexImage;
-    image.addEventListener("error", imgError);
-
-    function imgError(image) {
-      index = 0;
-      arrowRight();
-    }
-
-    function arrowRight() {
-      index++;
-      image.src = nameImage + '.' + index + '.' + formatImage;
-    }
 
     function showFormOrder() {
       let form = document.querySelector('.product__order');

@@ -1,7 +1,8 @@
 ---
 layout: layouts/produkt
 title: Produkttt 007
-obrazek: kalhoty.jpg
+obrazek: /kalhoty-domaci/kalhoty1.jpg
+obrazek2: /kalhoty-domaci/kalhoty2.jpg
 cena: 250kc
 ---
 

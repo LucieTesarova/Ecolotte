@@ -2,6 +2,7 @@
 layout: layouts/produkt
 title: Produkttt 005
 obrazek: /triko-klasicke/triko.1.jpg
+obrazek2: /triko-klasicke/triko.2.jpg
 cena: 190kc
 ---
 
