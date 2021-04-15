@@ -1,0 +1,28 @@
+
+.about-me{
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: $margin-large-size;
+overflow: auto;
+}
+
+.about-me__image{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.about-me__text{
+    margin-left: $margin-normal-size;
+}
+
+.about-brand{
+    margin: $margin-large-size 0;
+}
+
+.about-brand__blockquote{
+    margin-top: $margin-large-size;
+    text-align: center;
+}
