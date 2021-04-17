@@ -3,11 +3,19 @@ layout: layouts/seznam-produktu
 eleventyExcludeFromCollections: true
 ---
 
-{%- for product in collections.all -%}
-<a href="{{ product.url }}"><h2>{{product.data.title}}</h2></a>
-<img src="/images/{{ product.data.obrazek }}" width="200" alt="" />
-<p>Cena: {{product.data.cena}}</p>
-<div>{{ product.templateContent | striptags | truncate(150) | safe }}</div>
-
-<hr />
-{%- endfor -%}
+<div class="listof-products">
+  {%- for product in collections.all -%}
+  <div class="listof-products__product">
+      <figure class="listof-products__image-container">
+        <img src="/images/{{ product.data.obrazek }}" width="200" alt="" />
+      </figure>
+      <a class="listof-products__name" href="{{ product.url }}"
+        ><p>{{product.data.title}}</p></a
+      >
+      <p class="listof-products__price"> {{product.data.cena}}</p>
+      <!-- <div>
+        {{ product.templateContent | striptags | truncate(150) | safe }}
+      </div> -->
+  </div>
+  {%- endfor -%}
+</div>

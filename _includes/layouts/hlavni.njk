@@ -4,20 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/style.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courgette&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Itim&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Ecolotte</title>
   </head>
   <body>
-    <div class="container-main">
+    <div class="container-header">
       <header class="header" role="banner">
         <div class="header__texts">
           <h1 class="header__title">Ecolotte</h1>
@@ -26,16 +38,20 @@
       </header>
 
       <nav role="navigation">
-        <ul class="menu">
-          <li><a href="/">O značce</a></li>
-          <li><a href="/produkt/">Produkty</a></li>
-          <li><a href="">Jak objednat</a></li>
-          <li><a href="">Kontakt</a></li>
-        </ul>
+        <div class="container-menu">
+          <ul class="menu">
+            <li><a href="/">O značce</a></li>
+            <li><a href="/produkt/">Produkty</a></li>
+            <li><a href="/jakobjednat/">Jak objednat</a></li>
+            <li><a href="/kontakt/">Kontakt</a></li>
+          </ul>
+        </div>
       </nav>
 
-      {{ content | safe }}
-
+        <div class="container-main">
+          {{ content | safe }}
+        </div>
+        
       <footer class="footer">
         <p class="footer__text">copyright</p>
       </footer>

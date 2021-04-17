@@ -1,0 +1,33 @@
+.listof-products {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $margin-normal-size;
+}
+
+.listof-products__product {
+  grid-column: 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: row;
+}
+
+.listof-products__image-container {
+  grid-column: 1/3;
+  margin: 0;
+}
+
+.listof-products__image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.listof-products__name {
+  grid-column: 1/2;
+  text-decoration: none;
+}
+
+.listof-products__price {
+  grid-column: 2/3;
+  text-align: right;
+}
