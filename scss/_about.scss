@@ -3,7 +3,7 @@
 display: flex;
 justify-content: center;
 align-items: center;
-margin-top: $margin-large-size;
+// margin-top: $margin-large-size;
 overflow: auto;
 }
 
@@ -12,23 +12,19 @@ overflow: auto;
     height: 200px;
     object-fit: cover;
     border-radius: 50%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 .about-me__text{
     margin-left: $margin-normal-size;
 }
 
-.about-brand{
-    margin: $margin-large-size 0;
-}
-
-.about-brand__section-bacground{
-    margin: $margin-normal-size 0;
-}
-
 .about-brand__blockquote{
     margin-top: $margin-large-size;
+    margin-bottom: $margin-large-size;
     text-align: center;
     font-style: italic;
-    font-size: $text-larger-size;
+    font-size: $text-largest-size;
+    color: $bg-color-dark;
+    text-shadow: 0 0 2px $bg-color-darker;
 }

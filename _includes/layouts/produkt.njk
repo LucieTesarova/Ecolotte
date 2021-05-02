@@ -10,7 +10,6 @@ layout: layouts/hlavni
       width="500"
       alt="foto produktu"
     />
-
   </figure>
   <div class="product__description">
     <div class="product__texts">
@@ -19,34 +18,42 @@ layout: layouts/hlavni
     </div>
     <div class="product__order-info">
       <p class="product__price">{{ cena }}</p>
-      <button class="product__button-order" onclick="showFormOrder()">
-        OBJEDNAT
+      <button
+        class="product__button product__button-order"
+        onclick="showFormOrder()"
+      >
+        NOVÁ OBJEDNÁVKA
       </button>
     </div>
   </div>
 
-  <div class="product__images">
-    <img src="/images/{{ obrazek2 }}" width="500" alt="foto trika" />
-  </div>
+  <figure class="product__image-container">
+    <img class="product__image" src="/images/{{ obrazek2 }}" width="500" alt="foto trika" />
+  </figure>
 
   <form class="product__order">
-    <label for="name">Jméno:</label><br />
+    <label for="name">JMÉNO:</label><br />
     <input type="text" name="name" id="name" /><br />
 
-    <label for="surname">Příjmení:</label><br />
+    <label for="surname">PŘÍJMENÍ:</label><br />
     <input type="text" name="surname" id="surname" /><br />
 
-    <label for="number">Počet kusů:</label><br />
+    <label for="number">POČET KUSŮ:</label><br />
     <input type="number" name="number" id="number" /><br />
 
-    <label>Poznámka:</label><br />
+    <label>POZNÁMKA:</label><br />
     <textarea id="message" placeholder="Zadej poznámku.."></textarea><br />
-
-    <button onclick="openEmail()">Odeslat objednávku</button>
+    <div class="product__botton-container">
+      <button
+        class="product__button product__button-form"
+        onclick="openEmail()"
+      >
+        ODESLAT
+      </button>
+    </div>
   </form>
 
   <script>
-
     function showFormOrder() {
       let form = document.querySelector('.product__order');
       form.style.display = 'block';

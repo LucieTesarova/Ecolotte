@@ -1,41 +1,103 @@
-.product{
+.product {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 100px 40px;
+  margin: 40px 0px;
+}
+
+.product__image-container {
+  margin: 0;
+  width: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.product__image{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  transition: transform .4s ease-in-out;
+}
+
+.product__image:hover{
+ transform: scale(1.5);
+}
+
+.product__description {
+  grid-column: 2/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product__button {
+  padding: 15px 32px;
+  text-align: center;
+  border: none;
+  font-size: $text-larger-size;
+  border-radius: 5px;
+  color:  $background-color;
+  text-shadow: 0 0 2px $dark-color;
+  background-color: $bg-color-darker; 
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  transition-duration: 0.4s;
+}
+
+.product__button:hover{
+  background-color: $dark-color;
+}
+
+.product__order-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product__price {
+  margin: 0;
+  font-weight: bold;
+  color: $bg-color-darker;
+  font-size: 1.5em;
+  text-shadow: 0 0 1px $bg-color-darker;
+  
+}
+
+.product__order {
+  display: none;
+  font-size: $text-normal-size;
+
+  input {
+    width: 100%;
+    line-height: 2;
+    margin-bottom: $margin-smallest-size;
+    border: none;
+    border: 2px solid $bg-color-darker;
+    font-size: $text-normal-size;
+  }
+
+  input:focus{
+    background-color: $color-base;
+  }
+
+  #message {
+    width: 100%;
+    line-height: 2;
+    margin-bottom: $margin-smallest-size;
+    border: none;
+    border: 2px solid $bg-color-darker;
+    font-size: $text-normal-size;
+  }
+
+  #message:focus{
+    background-color: $color-base;
+  }
+
+  .product__botton-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 40px;
-    margin: 40px 0px;
-}
+  }
 
-.product__image-container{
-    margin: 0;
-    display: flex;
-    align-items: center;
-}
-
-
-.product__description{
+  .product__button-form { 
+    align-self: center;
     grid-column: 2/3;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.product__order-info{
-    display: flex;
-    justify-content: space-between; 
-}
-
-.product__order{
-    display: none;
-    grid-column: 2/3;
-
-    input{
-        width: 100%;
-        line-height: 2;
-    }
-   
-    #message{
-        width: 100%;
-        line-height: 2;
-    }
+  }
 }

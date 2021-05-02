@@ -1,9 +1,9 @@
 ---
 layout: layouts/produkt
-title: Produkttt 005
+title: Produkt 005
 obrazek: /triko-klasicke/triko.1.jpg
 obrazek2: /triko-klasicke/triko.2.jpg
-cena: 190kc
+cena: 190 Kč
 ---
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit sed aliquam unde ad voluptatum dolor lorem dolore vitae consequatur unde sapiente. 

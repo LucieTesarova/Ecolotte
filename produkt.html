@@ -5,17 +5,15 @@ eleventyExcludeFromCollections: true
 
 <div class="listof-products">
   {%- for product in collections.all -%}
-  <div class="listof-products__product">
+  <a class="listof-products__product" href="{{ product.url }}">
       <figure class="listof-products__image-container">
         <img src="/images/{{ product.data.obrazek }}" width="200" alt="" />
       </figure>
-      <a class="listof-products__name" href="{{ product.url }}"
-        ><p>{{product.data.title}}</p></a
-      >
+      <p class="listof-products__name"> {{product.data.title}} </p>
       <p class="listof-products__price"> {{product.data.cena}}</p>
       <!-- <div>
         {{ product.templateContent | striptags | truncate(150) | safe }}
       </div> -->
-  </div>
+    </a>
   {%- endfor -%}
 </div>
