@@ -18,8 +18,19 @@
   transition: transform .4s ease-in-out;
 }
 
-.product__image:hover{
- transform: scale(1.5);
+// .product__image:focus{
+//  //transform: scale(1.5);
+// }
+
+.zoom{
+  position: sticky;
+  width: 50vw;
+  height: auto;
+  z-index: 1;
+  margin: 50px;
+  left: 25%;
+  top: 50%;
+  box-shadow: 0 0 5px 8px $bg-color, 0 0 0 100vmax $color-dark;
 }
 
 .product__description {
@@ -35,15 +46,15 @@
   border: none;
   font-size: $text-larger-size;
   border-radius: 5px;
-  color:  $background-color;
-  text-shadow: 0 0 2px $dark-color;
+  color:  $bg-color;
+  text-shadow: 0 0 2px $color-dark;
   background-color: $bg-color-darker; 
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   transition-duration: 0.4s;
 }
 
 .product__button:hover{
-  background-color: $dark-color;
+  background-color: $color-dark;
 }
 
 .product__order-info {

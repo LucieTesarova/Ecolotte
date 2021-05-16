@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: $margin-normal-size;
-  margin: $margin-small-size 0;
 }
 
 .listof-products__product {
@@ -13,7 +12,7 @@
   background-color: $color-base;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   text-decoration: none;
-  color: $dark-color;
+  color: $color-dark;
 }
 
 .listof-products__product:hover{
