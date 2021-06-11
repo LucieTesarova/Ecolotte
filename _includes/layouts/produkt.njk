@@ -30,7 +30,14 @@ layout: layouts/hlavni
   </div>
 
   <figure class="product__image-container">
-    <img class="product__image" id="product__image2" src="/images/{{ obrazek2 }}" width="500" alt="foto trika" onclick="zoomImage2()"/>
+    <img
+      class="product__image"
+      id="product__image2"
+      src="/images/{{ obrazek2 }}"
+      width="500"
+      alt="foto trika"
+      onclick="zoomImage2()"
+    />
   </figure>
 
   <form class="product__order">
@@ -62,9 +69,10 @@ layout: layouts/hlavni
     }
 
     function openEmail() {
-      window.location.href = `mailto:recipient#%#example.com?subject=Ecolotte-Objednavka: ${
-        document.querySelector('.product__title').textContent
-      }
+      window.location.href =
+        `mailto:recipient#%#example.com?subject=Ecolotte-Objednavka: ${
+          document.querySelector('.product__title').textContent
+        }
            &body=Produkt: ${
              document.querySelector('.product__title').textContent
            },
@@ -72,19 +80,19 @@ layout: layouts/hlavni
            %0D%0APrijmeni: ${document.querySelector('#surname').value},
            %0D%0APocet kusu: ${document.querySelector('#number').value},
            %0D%0APoznamka: ${document.getElementById('message').value}`.replace(
-        '#%#',
-        '@'
-      );
+          '#%#',
+          '@'
+        );
     }
 
-    function zoomImage1(){
+    function zoomImage1() {
       let image = document.querySelector('#product__image1');
-      image.classList.toggle("zoom");
+      image.classList.toggle('zoom');
     }
 
-    function zoomImage2(){
+    function zoomImage2() {
       let image = document.querySelector('#product__image2');
-      image.classList.toggle("zoom");
+      image.classList.toggle('zoom');
     }
 
   </script>

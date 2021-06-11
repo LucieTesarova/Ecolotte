@@ -8,29 +8,17 @@
 
 .product__image-container {
   margin: 0;
-  width: 500px;
-  display: flex;
-  align-items: center;
 }
 
-.product__image{
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  transition: transform .4s ease-in-out;
+.product__image {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: zoom-in;
+  transition: transform .3s ease-in-out;
 }
 
-// .product__image:focus{
-//  //transform: scale(1.5);
-// }
-
-.zoom{
-  position: sticky;
-  width: 50vw;
-  height: auto;
-  z-index: 1;
-  margin: 50px;
-  left: 25%;
-  top: 50%;
-  box-shadow: 0 0 5px 8px $bg-color, 0 0 0 100vmax $color-dark;
+.zoom {
+  cursor: zoom-out;
+  transform: scale(2);
 }
 
 .product__description {
@@ -46,14 +34,14 @@
   border: none;
   font-size: $text-larger-size;
   border-radius: 5px;
-  color:  $bg-color;
+  color: $bg-color;
   text-shadow: 0 0 2px $color-dark;
-  background-color: $bg-color-darker; 
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  background-color: $bg-color-darker;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transition-duration: 0.4s;
 }
 
-.product__button:hover{
+.product__button:hover {
   background-color: $color-dark;
 }
 
@@ -69,7 +57,6 @@
   color: $bg-color-darker;
   font-size: 1.5em;
   text-shadow: 0 0 1px $bg-color-darker;
-  
 }
 
 .product__order {
@@ -85,7 +72,7 @@
     font-size: $text-normal-size;
   }
 
-  input:focus{
+  input:focus {
     background-color: $color-base;
   }
 
@@ -98,7 +85,7 @@
     font-size: $text-normal-size;
   }
 
-  #message:focus{
+  #message:focus {
     background-color: $color-base;
   }
 
@@ -107,7 +94,7 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  .product__button-form { 
+  .product__button-form {
     align-self: center;
     grid-column: 2/3;
   }

@@ -1,19 +1,26 @@
 $bg-color:#fff;
 $bg-color-dark:	#7fe8ba ;
+//$bg-color-dark:	$new-color2ligter ;
 $bg-color-darker:#52d89e ;
+//$bg-color-darker:$new-color2ligter ;
 $color-base: #aaf0d1;
+//$color-base: $new-color2;
 $color-dark: #3a5055;
 //$bg-color-dark:	#13a699;
 //$bg-color-dark:	#13a699;
 //$bg-color-dark:	#13a699;
 //$dark-color: #536878;
 //$dark-color: #4a4e69;
+$new-color2: #04a27f;
+$new-color2ligter: #4fc7a6;
+
+
 
 //velikost textu
-$text-logo-size: 10rem;
-$text-largest-size: 2.5rem;
-$text-larger-size: 1.2rem;
-$text-normal-size: 100%;
+$text-logo-size: 9em;
+$text-largest-size: 2.2em;
+$text-larger-size: 1.2em;
+$text-normal-size: 150%;
 
 //margin
 $margin-large-size: 8rem;
