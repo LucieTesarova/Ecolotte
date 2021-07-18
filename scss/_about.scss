@@ -1,31 +1,45 @@
+.about-me {
+  &__image-container {
+    width: min-content;
+    margin: 0 auto;
+  }
 
-.about-me{
-display: flex;
-justify-content: center;
-align-items: center;
-overflow: auto;
-
-&__text{
-    margin-left: $margin-normal-size;
-}
-
-&__image{
-    width: 200px;
-    height: 200px;
+  &__image {
+    width: 100px;
+    height: 100px;
     object-fit: cover;
     border-radius: 50%;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  @media screen and (min-width: $mobil) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+
+    &__text {
+      margin-left: $margin-normal-size;
+    }
+  }
+
+  @media screen and (min-width: $pc) {
+    &__image {
+        width: 200px;
+        height: 200px;
+      }
+  }
 }
 
-.about-brand__blockquote{
-    margin-top: $margin-large-size;
-    margin-bottom: $margin-large-size;
-    text-align: center;
-    font-style: italic;
+.about-brand__blockquote {
+  margin-top: $margin-normal-size;
+  margin-bottom: $margin-normal-size;
+  text-align: center;
+  font-style: italic;
+  text-shadow: 0 0 2px $bg-color-darker;
+
+  @media screen and (min-width: $mobil) {
     font-size: $text-largest-size;
-    color: $bg-color-dark;
-    text-shadow: 0 0 2px $bg-color-darker;
+  }
 }
-
-
