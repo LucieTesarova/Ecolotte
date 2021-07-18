@@ -16,7 +16,8 @@ body {
 
 .container-main {
   max-width: 1240px;
-  margin: 0 auto;
+  margin: 100px auto;
+  margin-bottom: 150px;
 }
 
 //ZAHLAVI
@@ -51,7 +52,6 @@ body {
 .container-menu {
   background-color: $bg-color-dark;
   margin: 0;
-  margin-bottom: $margin-large-size;
   padding: 0;
   //background-image: linear-gradient($bg-color-dark 15%, $background-color 100%);
 }
@@ -80,9 +80,9 @@ body {
 //ZAPATI
 .footer {
   margin-top: $margin-large-size;
-  position: relative;
+  position: fixed;
+  width: 100%;
   bottom: 0;
-  margin-bottom: 0;
   background-color: $bg-color-dark;
   background-image: linear-gradient($color-base 30%, $bg-color-dark 100%);
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -93,7 +93,6 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0;
-  height: 50px;
   font-size: $text-larger-size;
   padding: 1em;
 }
