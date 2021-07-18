@@ -25,21 +25,30 @@ body {
   background-color: $color-base;
   //background-image: linear-gradient($bg-color-dark 5%, $color-base 60%, $bg-color-dark 90%);
   background-image: linear-gradient($color-base 50%, $bg-color-dark 100%);
-  min-height: 380px;
   display: flex;
   justify-content: center;
-  align-items: center;
-}
 
-.header__title {
-  font-size: $text-logo-size;
-  margin: 0;
-}
+  @media screen and (min-width: 1000px) {
+    min-height: 320px;
+  }
 
-.header__description {
-  font-size: $text-larger-size;
-  display: flex;
-  justify-content: flex-start;
+  &__title {
+    font-size: 4em;
+    margin: 0;
+
+    @media screen and (min-width: 1000px) {
+    font-size: $text-logo-size;
+    }
+  }
+
+  &__description {
+    display: flex;
+    justify-content: flex-start;
+
+    @media screen and (min-width: 1000px) {
+      font-size: $text-larger-size;
+      }
+  }
 }
 
 //MENU
@@ -57,10 +66,9 @@ body {
 }
 .menu {
   list-style: none;
-  display: flex;
-  justify-content: space-between;
   max-width: 1040px;
   margin: 0 auto;
+  text-align: center;
 
   a {
     color: $color-dark;
@@ -74,6 +82,11 @@ body {
 
   li:hover {
     color: black;
+  }
+
+  @media screen and (min-width: 640px) {
+  display: flex;
+  justify-content: space-between;
   }
 }
 
