@@ -4,18 +4,18 @@ display: flex;
 justify-content: center;
 align-items: center;
 overflow: auto;
+
+&__text{
+    margin-left: $margin-normal-size;
 }
 
-.about-me__image{
+&__image{
     width: 200px;
     height: 200px;
     object-fit: cover;
     border-radius: 50%;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
-
-.about-me__text{
-    margin-left: $margin-normal-size;
 }
 
 .about-brand__blockquote{
@@ -27,3 +27,5 @@ overflow: auto;
     color: $bg-color-dark;
     text-shadow: 0 0 2px $bg-color-darker;
 }
+
+
