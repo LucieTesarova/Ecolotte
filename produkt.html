@@ -11,9 +11,6 @@ eleventyExcludeFromCollections: true
       </figure>
       <p class="listof-products__name"> {{product.data.title}} </p>
       <p class="listof-products__price"> {{product.data.cena}}</p>
-      <!-- <div>
-        {{ product.templateContent | striptags | truncate(150) | safe }}
-      </div> -->
     </a>
   {%- endfor -%}
 </div>
