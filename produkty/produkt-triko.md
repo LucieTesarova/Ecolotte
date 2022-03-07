@@ -1,8 +1,8 @@
 ---
 layout: layouts/produkt
 title: Produkt 005
-obrazek: /triko-klasicke/triko.1.jpg
-obrazek2: /triko-klasicke/triko.2.jpg
+obrazek: /triko-klasicke/triko1.jpg
+obrazek2: /triko-klasicke/triko2.jpg
 cena: 190 Kč
 ---
 
